@@ -103,30 +103,34 @@ getData()})
       </div>
       <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '50px 0' }}>
       <h2 className='student-details'>Student details</h2>
-      <table className="student-table gradient-bg" style={{ border: '1px solid #ccc', borderCollapse: 'collapse', margin: '100px 0',marginLeft: '800px', marginTop: '200px', width: '40%', backgroundColor: '#f4f4f4'}}>
-        <thead>
-          <tr style={{ backgroundColor: '#ddd' }}>
-          <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>StudentID</td>
-            <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>Name</th>
-            <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>Roll Number</th>
-            <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>Class</th>
-            <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((d, i) => (
-            <tr key={i} style={{ backgroundColor: i % 2 === 0 ? '#f9f9f9' : '#fff' }}>
-              <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.id}</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.name}</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.roll_number}</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.class}</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>
-        <button className="delete-button" onClick={() => handleDelete(d.id)}>Delete</button>
-      </td>
+            <div className="table-container">
+            <div className="table-container">
+        <table className="student-table gradient-bg" style={{ border: '1px solid #ccc', borderCollapse: 'collapse', width: '40%', backgroundColor: '#f4f4f4' }}>
+          <thead>
+            <tr style={{ backgroundColor: '#ddd' }}>
+              <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>StudentID</td>
+              <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>Name</th>
+              <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>Roll Number</th>
+              <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>Class</th>
+              <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((d, i) => (
+              <tr key={i} style={{ backgroundColor: i % 2 === 0 ? '#f9f9f9' : '#fff' }}>
+                <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.id}</td>
+                <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.name}</td>
+                <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.roll_number}</td>
+                <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.class}</td>
+                <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>
+                  <button className="delete-button" onClick={() => handleDelete(d.id)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
     </div>
     </div>
     </div>
