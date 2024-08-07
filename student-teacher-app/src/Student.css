@@ -124,14 +124,20 @@
   transform: scale(1.1); /* Scale up on hover */
 }
 
+.table-container {
+  display: flex;
+  justify-content: center; /* Centers the table horizontally */
+  margin: 100px 120; /* Adjust margins as needed */
+
+}
+
 .student-table {
-  border-collapse: separate;
   border-spacing: 0;
   border-radius: 10px;
   overflow: hidden;
-  width: 100%; /* Make sure the table spans the full width of its container */
+  width: 100%; /* Table spans the full width of its container */
+  margin-left: 410px; /* Shift the table slightly to the right */
 }
-
 .gradient-bg {
   background: linear-gradient(135deg, #f7dfcf, #ebe5d9);
 }
