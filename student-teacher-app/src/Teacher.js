@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import './Teacher.css';
+import { Link } from 'react-router-dom';
+import FloatingButton from './FloatingButton';
 
 function Teacher() {
   const [TeacherData, setTeacherData] = useState({
@@ -65,6 +67,14 @@ const handleDelete = (id) => {
 
   return (
     <div className="Teacher-container">
+      <div className="button-container-teacher">
+    <Link to="/">
+      <button className="button-63" role="button">Back to Menu</button>
+    </Link>
+    <Link to="/student">
+      <button className="button-63" role="button">Student</button>
+    </Link>
+  </div>
       <div className="content">
         <h2 className='store-teacher-details' style={{ marginLeft: '100px' }}>Teacher Details</h2>
         <form onSubmit={handleSubmit}>
@@ -95,6 +105,7 @@ const handleDelete = (id) => {
               name="class"
               value={TeacherData.class}
               onChange={handleInputChange}
+              required
             />
           </div>
           <div className="form-group">
@@ -136,6 +147,7 @@ const handleDelete = (id) => {
 
       </div>
     </div>
+    <FloatingButton />
     </div>
   );
 }
