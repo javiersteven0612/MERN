@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import './Student.css';
+import { Link } from 'react-router-dom';
+import FloatingButton from './FloatingButton'; 
 
 function Student() {
   const [studentData, setStudentData] = useState({
@@ -60,8 +62,18 @@ getData()})
   };
 
   return (
+
+    
     <div>
     <div className="student-container">
+    <div className="button-container-student">
+    <Link to="/">
+      <button className="button-63" role="button">Back to Menu</button>
+    </Link>
+    <Link to="/teacher">
+      <button className="button-63" role="button">Teacher</button>
+    </Link>
+  </div>
       <div className="content">
         <h2 className='store-student-details'style={{ marginLeft: '100px' }}>Student Details</h2>
         <form onSubmit={handleSubmit}>
@@ -133,6 +145,7 @@ getData()})
     </div>
     </div>
     </div>
+    <FloatingButton />
     </div>
   );
 }
