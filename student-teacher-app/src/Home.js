@@ -2,7 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import FloatingButton from './FloatingButton'; // Import the FloatingButton component
+import FloatingButton from './FloatingButton';
+import Credits from './credits';
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         </div>
       </div>
       <FloatingButton /> {/* Add the FloatingButton component */}
+      <Credits /> {/* Add the Credits component in the footer */}
     </div>
   );
 }
