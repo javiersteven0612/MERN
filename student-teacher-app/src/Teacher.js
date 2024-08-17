@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import './Teacher.css';
 import { Link } from 'react-router-dom';
 import FloatingButton from './FloatingButton';
+import Credits from './credits';
 
 function Teacher() {
   const [TeacherData, setTeacherData] = useState({
@@ -151,6 +152,7 @@ function Teacher() {
         </div>
       </div>
       <FloatingButton />
+      <Credits />
     </div>
   );
 }
