@@ -3,7 +3,7 @@
 /* General styles for the floating button container */
 .floating-button-container {
   position: fixed;
-  bottom: 20px; /* Distance from the bottom */
+  bottom: 45px; /* Distance from the bottom */
   right: 20px; /* Distance from the right */
   display: flex;
   flex-direction: column;
