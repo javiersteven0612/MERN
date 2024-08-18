@@ -83,7 +83,7 @@ function Teacher() {
         </Link>
       </div>
       <div className="content">
-        <h2 className="store-teacher-details" style={{ marginLeft: '100px' }}>Teacher Details</h2>
+        <h2 className="store-teacher-details" style={{ marginTop: '150px', marginLeft: '100px' }}>Teacher Details</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name:</label>
